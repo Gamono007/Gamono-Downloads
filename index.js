@@ -58,7 +58,7 @@ app.get('/download', async (req, res) => {
     const ffm = ffmpeg(videoReadableStream)
       .format('mp3')
       .on('error', (err) => {
-        res.end();
+        res.status(500).send({ err });
       });
 
     req.on('close', () => {
