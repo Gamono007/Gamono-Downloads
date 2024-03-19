@@ -5,7 +5,7 @@ const ytdl = require('ytdl-core');
 const contentDisposition = require('content-disposition');
 const { videoId } = require('@gonetone/get-youtube-id-by-url')
 const ffmpeg = require('fluent-ffmpeg');
-ffmpeg.setFfmpegPath("./ffmpeg.exe");
+ffmpeg.setFfmpegPath("./ffmpeg");
 
 const app = express();
 const porta = 255;
