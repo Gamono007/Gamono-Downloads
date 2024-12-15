@@ -5,10 +5,10 @@ const ytdl = require('ytdl-core');
 const contentDisposition = require('content-disposition');
 const { videoId } = require('@gonetone/get-youtube-id-by-url')
 const ffmpeg = require('fluent-ffmpeg');
-ffmpeg.setFfmpegPath("./ffmpeg");
+ffmpeg.setFfmpegPath("./ffmpeg.exe");
 
 const app = express();
-const porta = 255;
+const porta = 80;
 
 app.use(cors());
 app.use(express.static(path.join(__dirname, 'home')));
@@ -58,6 +58,7 @@ app.get('/download', async (req, res) => {
     const ffm = ffmpeg(videoReadableStream)
       .format('mp3')
       .on('error', (err) => {
+        console.error('Error during extraction:', err);
         res.end();
       });
 

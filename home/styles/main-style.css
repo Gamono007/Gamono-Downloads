@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body, html {
+    background: #fff;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #f0f0f0;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 16px;
+    box-shadow: 0em 0.1em 0.5em rgba(0, 0, 0, 0.25);
+}
+
+header img {
+    width: 64px;
+    height: 64px;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+footer {
+    background-color: #f0f0f0;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+.container {
+    text-align: center;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5ch;
+    border-radius: 3ch;
+}
+.container span {
+    color: #2b2d31;
+    font-weight: bold;
+    position: relative;
+    top: -10px;
+}
+#url-input {
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 300px;
+    border-radius: 1ch;
+    border: 0.3ch solid #808080;
+}
+#url-input:focus {
+    outline: none;
+}
+#baixar {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 1ch;
+}
+#baixar:disabled {
+    background-color: #808080;
+}
